@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p> So luong xuat vuot qua so luong nvl hien co</p>
+	<p> Tiep tuc nhap lai hoa don xuat hay khong</p>
+	<form method="get" th:action="@{/hdx/add}" th:object="${hdx}">
+    	<td colspan="3"><button type="submit" style="width: 100px; height: 25px">Tiep tuc</button>
+	</form>
+	<form method="get" th:action="@{/hdx/getAll}" th:object="${hdx}">
+    	<td colspan="3"><button type="submit" style="margin-top: 10px; width: 100px; height: 25px">Huy bo</button>
+	</form>
+</body>
+</html>

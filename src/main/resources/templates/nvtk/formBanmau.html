@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" th:action="@{/bm/save}" th:object="${bm}">
+		<table border="0" cellpadding="10">
+				<td><input type="hidden" th:field="*{id}" /></td>
+				<tr>
+                    <td>Ten:</td>
+                    <td><input type="text" th:field="*{ten}" /></td>
+                </tr>
+				
+                <tr>
+                    <td>Mo ta:</td>
+                    <td><input type="text" th:field="*{mota}" /></td>
+                </tr>
+             
+                <tr>
+                    <td>Thanh phan:</td>
+                    <td><input type="text" th:field="*{thanhPhan}" /></td>
+                </tr>
+                <tr>
+                    <td>Don hang:</td>
+                    <td><input type="text" th:field="*{donhangs.id}" /></td>
+                </tr>             
+                
+                <td><input type="hidden" th:field="*{nhanviens.id}" /></td>      
+                         
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+            </table>
+	</form>
+</body>
+</html>
